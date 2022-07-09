@@ -1,0 +1,7 @@
+MARIO SITE NOTES
+=====================================
+
+Virtual Env
+================
+from the source folder:    source mario/bin/activate
+
