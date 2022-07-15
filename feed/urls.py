@@ -1,8 +1,7 @@
 from . import views
 from django.views.generic.base import TemplateView
-from feed.views import main, datboy, nomi
-from feed.views import datboy
-from django.urls import include, re_path
+from feed.views import nomi, datboy, main
+from django.urls import include, re_path, path
 from django.urls import re_path as url
 
 from django.http import HttpResponse, HttpResponseRedirect
@@ -14,9 +13,9 @@ app_name = 'feed'
 
 urlpatterns = [ # main views
     
-    re_path('', main.as_view(), name='main'),
-    re_path('janye/', views.datboy.as_view(), name='datboy'),
-    re_path('nomi/', views.nomi.as_view(), name='nomi'),
+    path('', main.as_view(), name='main'),
+    path('janye/', datboy.as_view(), name='datboy'),
+    path('nomi/', nomi.as_view(), name='nomi'),
     # path('about/', aboutus.as_view(), name='aboutus'),
     
     # path('programs/', programs.as_view(), name='programs'),
