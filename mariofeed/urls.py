@@ -19,6 +19,7 @@ from django.views.generic.base import TemplateView
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include, re_path
+
 urlpatterns = [
     re_path('admin/', admin.site.urls),
     # re_path('home/', include('feed.urls', namespace='feed')),
